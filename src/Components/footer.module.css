@@ -1,0 +1,15 @@
+.footerContainer{
+  background-color: var(--darkest);
+  color: var(--textWhite);
+}
+.disclaimerText{
+  opacity: 0.8;
+}
+.langUsed{
+  justify-content: center;
+  align-items: center;
+}
+.langUsed p {
+  opacity: 0.5;
+  width: 90%;
+}

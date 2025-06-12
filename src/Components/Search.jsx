@@ -12,7 +12,7 @@ export default function Search({onSearch}) {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <div className={`${styles.searchContainer} flex w-full bg-amber-50 overflow-hidden rounded-full`}>
+      <div className={`${styles.searchContainer} flex w-full overflow-hidden rounded-lg`}>
         <input type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}

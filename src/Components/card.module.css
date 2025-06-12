@@ -1,6 +1,7 @@
 .cardContainer{
   background-color: var(--grayblue);
 }
+
 .cardTitle{
   color: var(--textWhite);
   background-color: var(--titleBg);
