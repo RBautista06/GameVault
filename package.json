@@ -1,4 +1,5 @@
 {
+  "homepage": "https://RBautista06.github.io/GameVault",
   "name": "gamevault",
   "private": true,
   "version": "0.0.0",
@@ -6,6 +7,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,7 +28,7 @@
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.5",
     "tailwindcss": "^4.1.10",
     "vite": "^6.3.5"
