@@ -1,0 +1,11 @@
+.genreContainer{
+  background: transparent;
+  color: var(--darkest);
+}
+.selectGenre{
+  color: var(--textWhite);
+  background: transparent;
+}
+.options{
+  background-color: var(--grayblue);
+}
