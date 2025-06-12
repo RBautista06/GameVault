@@ -1,0 +1,66 @@
+.heroContainer {
+  background: linear-gradient(
+    to bottom,
+    var(--darkest),
+    transparent,
+    transparent
+  );
+  min-height: 500px;
+  position: relative;
+}
+.backGroundContainer {
+  filter: drop-shadow(0px 0px 5px var(--darkest));
+  position: absolute;
+  z-index: -1;
+}
+.backGroundImage {
+  background-image: url("../assets/warframebg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url("../assets/fire-mobile.svg");
+  mask-image: url("../assets/fire-mobile.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.backGroundImage::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 45%);
+}
+.welcomeText{
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+  color: var(--lightOrange);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  width: fit-content;
+  line-height: 1;
+}
+.titleText{
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
+  color: var(--textWhite);
+  font-size: clamp(4rem, 7vw, 8rem);
+  width: fit-content;
+  line-height: 1;
+  text-shadow: 0px 0px 5px var(--darkest);
+}
+.subTitle{
+  color: var(--textWhite);
+  opacity: 0.8;
+}

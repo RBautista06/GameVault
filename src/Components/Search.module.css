@@ -1,0 +1,8 @@
+.searchContainer{
+  border: solid 2px var(--gray);
+  box-shadow: 0px 0px 10px var(--darkblue);
+}
+.searchButton{
+  background: var(--grayblue);
+  color: var(--textWhite)
+}
