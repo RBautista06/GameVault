@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --darkest: #121212;
+  --darkblue: #0d0d2b;
+  --grayblue: #22273a;
+  --titleBg: hsla(228, 39%, 32%, 0.39);
+  --gray: #4d567a;
+  --textWhite: #f5f5f5;
+  --orange: #f0a93f;
+  --lightOrange: #f1d96d;
+}
+
+*{
+  font-family: 'Clash Grotesk', sans-serif;
+}
