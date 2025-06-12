@@ -1,6 +1,5 @@
 {
   "homepage": "https://RBautista06.github.io/GameVault",
-  "homepage": "https://RBautista06.github.io/GameVault",
   "name": "gamevault",
   "private": true,
   "version": "0.0.0",
@@ -8,8 +7,6 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
