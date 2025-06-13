@@ -1,6 +1,10 @@
 .footerContainer{
-  background-color: var(--darkest);
+  background: linear-gradient(to top, var(--darkest),var(--darkest), transparent);
   color: var(--textWhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .disclaimerText{
   opacity: 0.8;
@@ -12,4 +16,8 @@
 .langUsed p {
   opacity: 0.5;
   width: 90%;
+}
+.icons {
+  opacity: 0.8;
+  color: var(--textWhite);
 }

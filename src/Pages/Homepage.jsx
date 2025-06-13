@@ -7,7 +7,9 @@ import GenreFilter from "../Components/GenreFilter.jsx";
 import Footer from "../Components/Footer.jsx";
 
 export default function Home() {
+
   const [games, setGames] = useState([]);
+  console.log(games);
   const [genre, setGenre] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
@@ -60,7 +62,8 @@ export default function Home() {
 
   return (
     <>
-      <section className={`${styles.heroContainer} text-lg w-full`}>
+    <div className="w-full flex flex-col items-center">
+      <section className={`${styles.heroContainer} text-lg max-w-7xl w-full`}>
         <div className={`${styles.backGroundContainer} text-lg w-full`}>
           <div className={`${styles.backGroundImage} text-lg w-full`}></div>
         </div>
@@ -73,11 +76,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center">
-            <p className={`${styles.subTitle} text-sm text-center leading-none w-80`}>Track your games, build your collection, and stay ahead of the curve. GameVault is your one-stop vault for everything gaming—organized, sleek, and always ready for your next adventure.</p>
+            <p className={`${styles.subTitle} text-sm md:text-md lg:text-lg text-center leading-none w-80 lg:w-100`}>Track your games, build your collection, and stay ahead of the curve. GameVault is your one-stop vault for everything gaming—organized, sleek, and always ready for your next adventure.</p>
           </div>
         </div>
       </section>
-      <section className="w-full flex flex-col gap-4 p-5">
+      <section className="w-full flex flex-col gap-4 p-5 max-w-7xl ">
         <Search onSearch={handleSearch} />
         <GenreFilter
           genres={genre}
@@ -85,17 +88,16 @@ export default function Home() {
           onGenreChange={handleGenreChange}
         />
 
-        <div className="grid grid-cols-2 grid-flow-row gap-4">
+        <div className="grid grid-cols-2 grid-flow-row gap-4 :grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {games
-            .slice()
-            .sort((a, b) => b.rating - a.rating)
-            .map((game) => (
-              <Card
-                key={game.id}
-                title={game.name}
-                image={game.background_image}
-                rating={game.rating}
-              />
+              .map((game) => (
+                <Card
+                  id={game.id}
+                  slug={game.slug}
+                  title={game.name}
+                  image={game.background_image}
+                  rating={game.rating}
+                />
             ))}
         </div>
         <div className={`${styles.paginationContainer} flex justify-between items-center gap-4 w-[100%]`}>
@@ -115,8 +117,11 @@ export default function Home() {
             Next
           </button>
         </div>
+
       </section>
-      <Footer />
+        <Footer />
+      </div>
+
 
     </>
   );

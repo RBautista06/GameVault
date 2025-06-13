@@ -1,3 +1,4 @@
+
 .heroContainer {
   background: linear-gradient(
     to bottom,
@@ -69,4 +70,30 @@
 }
 .paginationButton{
   background-color: transparent;
+}
+@media (min-width: 768px) {
+  .heroContainer {
+    background: transparent;
+    min-height: 800px;
+    position: relative;
+  }
+  .backGroundImage {
+    -webkit-mask-image: url("../assets/fire-tablet.svg");
+    mask-image: url("../assets/fire-tablet.svg");
+    min-height: 800px;
+  }
+}
+/* Desktop and up (≥1000px) */
+@media (min-width: 1000px) {
+  .heroContainer {
+    background: transparent;
+    min-height: 720px;
+    position: relative;
+  }
+  .backGroundImage {
+    background-image: url("../assets/warframebg.jpg");
+    -webkit-mask-image: url("../assets/fire-desktop.svg");
+    min-height: 720px;
+    mask-image: url("../assets/fire-desktop.svg");
+  }
 }

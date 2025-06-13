@@ -14,3 +14,15 @@
 *{
   font-family: 'Clash Grotesk', sans-serif;
 }
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  transition: 0.3s ease;
+}
+button:hover{
+  transform: scale(1.1);
+}

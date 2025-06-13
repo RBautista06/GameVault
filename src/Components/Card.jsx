@@ -1,4 +1,5 @@
 import styles from './card.module.css';
+import { Link } from 'react-router-dom'
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import defaultImg from '../assets/warframebg.jpg'
 export default function Card(props) {
@@ -14,16 +15,19 @@ export default function Card(props) {
     }
   }
   return (
-    <div className={`${styles.cardContainer} rounded-lg p-3 flex flex-col gap-3`}>
-      <div className="overflow-hidden border relative aspect-square rounded-md">
-        <img src={props.image || defaultImg} className="w-full h-full object-cover object-center" />
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="star-rating flex gap-2 justify-center">
-          {stars}
+    <Link to={`/details/${props.slug}`} key={props.id}>
+      <div className={`${styles.cardContainer} rounded-lg p-3 flex flex-col gap-3 h-full`}>
+        <div className="overflow-hidden relative aspect-square rounded-md">
+          <img src={props.image || defaultImg} className="w-full h-full object-cover object-center" />
         </div>
-        <h2 className={`${styles.cardTitle} w-full text-center rounded-sm`}>{props.title}</h2>
+        <div className="flex flex-col gap-2">
+          <div className="star-rating flex gap-2 justify-center">
+            {stars}
+          </div>
+          <h2 className={`${styles.cardTitle} w-full text-center rounded-sm`}>{props.title}</h2>
+
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }

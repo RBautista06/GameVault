@@ -1,0 +1,14 @@
+.titleText {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 10px;
+  font-size: clamp(4rem, 7vw, 8rem);
+  line-height: 1;
+  color: transparent;
+  background-image: linear-gradient(to bottom, #ff8a00, #fdfde8); /* Customize your gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.backButton{
+  background-color: var(--grayblue);
+  color: var(--textWhite);
+}
