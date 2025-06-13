@@ -4,7 +4,7 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si'
 export default function Footer() {
   return (
-    <div className={`${styles.footerContainer} px-5 pb-5 text-sm mt-3`}>
+    <div className={`${styles.footerContainer} px-5 pb-5 text-sm mt-3 w-full`}>
       <div className='flex flex-col gap-2 max-w-4xl'>
         <div className='border-b-1 py-2 text-center'>
           <h2 className='font-semibold text-2xl'>GAME VAULT</h2>
@@ -19,7 +19,7 @@ export default function Footer() {
           <SiTailwindcss title="Tailwind CSS"  />
           <FaReact title="React"  />
         </div>
-        <p className='text-center opacity-[70%] max-w-4xl'>
+        <p className='text-center opacity-[70%]'>
           © {new Date().getFullYear()} Game Vault. All rights reserved. Powered by the <a href="https://rawg.io/apidocs" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">RAWG Video Games Database API</a>.
         </p>
       </div>
